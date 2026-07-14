@@ -1,0 +1,7 @@
+streamlit
+streamlit-autorefresh
+pandas
+python-telegram-bot
+requests
+websockets
+httpx
