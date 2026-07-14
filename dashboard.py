@@ -3,6 +3,8 @@ import logging
 import os
 import json
 import time
+import subprocess
+import sys
 
 # 스레드 경고 로그 완전 제거 최상단 배치
 warnings.filterwarnings("ignore", message="missing ScriptRunContext")
@@ -13,6 +15,11 @@ import streamlit.components.v1 as components
 import pandas as pd
 from streamlit_autorefresh import st_autorefresh
 
+
+if "BOT_RUNNING" not in os.environ:
+    os.environ["BOT_RUNNING"] = "true"
+    subprocess.Popen([sys.executable, "bot.py"])
+    
 st.set_page_config(page_title="🐋 WHALE MONITORING SYSTEM", layout="wide")
 st_autorefresh(interval=1000, key="datarefresh")
 
