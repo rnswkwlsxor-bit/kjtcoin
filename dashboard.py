@@ -14,6 +14,11 @@ import streamlit as st
 import streamlit.components.v1 as components
 import pandas as pd
 from streamlit_autorefresh import st_autorefresh
+import streamlit as st
+
+# Streamlit 1.45.0 버전 이상에서 클라이언트 IP 확인
+client_ip = st.context.ip_address
+st.write(f"현재 접속하신 IP 주소는 {client_ip} 입니다.")
 
 # --- [해결책 A] bot.py 백그라운드 구동 및 초기화 로직 --
 current_dir = os.path.dirname(os.path.abspath(__file__))
