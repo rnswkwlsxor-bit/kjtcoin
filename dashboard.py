@@ -15,7 +15,7 @@ import streamlit.components.v1 as components
 import pandas as pd
 from streamlit_autorefresh import st_autorefresh
 
-# --- [해결책 A] bot.py 백그라운드 구동 및 초기화 로직 ---
+# --- [해결책 A] bot.py 백그라운드 구동 및 초기화 로직 --
 current_dir = os.path.dirname(os.path.abspath(__file__))
 bot_path = os.path.join(current_dir, "bot.py")
 
